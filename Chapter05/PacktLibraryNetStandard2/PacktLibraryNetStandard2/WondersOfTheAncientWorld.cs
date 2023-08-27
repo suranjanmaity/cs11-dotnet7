@@ -1,4 +1,8 @@
 ﻿namespace Packt.Shared;
+[Flags]
+/* for performing bitwise operation on enum that will add strings with commma separated
+ * and if [Flags]  attribute is not used bitwise operation will give number instead of string
+*/
 public enum WondersOfTheAncientWorld
 {
     None                     = 0b_0000_0000, // i.e. 0
