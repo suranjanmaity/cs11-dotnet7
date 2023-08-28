@@ -11,4 +11,8 @@ public class Person : object
     {
         WriteLine($"{Name} was born on a {DateOfBirth:dddd}.");
     }
+    public int MethodToCall(string message)
+    {
+        return message.Length;
+    }
 }
