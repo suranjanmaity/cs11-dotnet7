@@ -15,16 +15,16 @@ public class Person : object
     {
         return message.Length;
     }
-    // Defining and handling delegates
+    // Defining and handling events
     //delegate field
-    public EventHandler? Shout;
+    public event EventHandler? Shout;
     //data field
     public int AngerLevel;
     //method
     public void Poke()
     {
         AngerLevel++;
-        if (AngerLevel > 3)
+        if (AngerLevel >= 3)
         {
             // if something is listening...
             if (Shout != null)

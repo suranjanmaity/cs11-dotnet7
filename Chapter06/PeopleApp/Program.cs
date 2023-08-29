@@ -28,8 +28,9 @@ key = 3;
 WriteLine(format:"key {0} has value: {1}",
     arg0:key, arg1: lookupIntString[key]);
        
-//assign a method to Shout delegate
-harry.Shout = Harry_shout;
+//assign event handler methods to Shout event
+harry.Shout += Harry_shout;
+harry.Shout += Harry_shout2;
 
 // call the Poke mehod that raises the Shout event
 harry.Poke();
