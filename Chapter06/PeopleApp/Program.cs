@@ -54,3 +54,9 @@ OutputPeopleNames(people, "After sorting using Person's IComparable implementati
 // Comparing objects using a swparate class
 Array.Sort(people,new PersonComparer());
 OutputPeopleNames(people, "After sorting using PersonComparer's IComparer implementation");
+//calling implicit and explicit implementation of Lose
+Person p = new();
+p.Lose();// calls implicit implementation of Losing a key
+((IGamePlayer)p).Lose(); // calls explicit implementation of losing a game
+IGamePlayer player = p as IGamePlayer;
+player.Lose(); // calls explicit implementation of loosing a game

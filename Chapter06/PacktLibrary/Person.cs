@@ -1,6 +1,14 @@
 ﻿namespace Packt.Shared;
-
-public class Person : IComparable<Person?>
+//implicit and explicit interface implementation
+public interface IGamePlayer
+{
+    void Lose();
+}
+public interface IKeyHolder
+{
+    void Lose();
+}
+public class Person : IComparable<Person?>,IGamePlayer,IKeyHolder
 {
     // properties
     public string? Name { get; set; }
@@ -72,5 +80,13 @@ public class Person : IComparable<Person?>
             position = 0; // this Person and other Person are at same position
         }
         return position;
+    }
+    public void Lose() // implicit implementation
+    {
+        // implement loosing a key
+    }
+    void IGamePlayer.Lose() // explicit implementation
+    {
+        // implement loosing a game
     }
 }
