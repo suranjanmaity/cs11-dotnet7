@@ -1,5 +1,5 @@
 ﻿namespace Packt.Shared;
-public struct DisplacementVector
+public record struct DisplacementVector
 {
     public int X { get; set; }
     public int Y { get; set; }
